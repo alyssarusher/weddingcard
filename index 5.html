@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Wedding Adventure!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #e07a5f;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    button {
+      background-color: #3d405b;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      margin: 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #81b29a;
+    }
+    #message {
+      margin-top: 40px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Congratulations on Your Wedding!</h1>
+  <p>It's time to choose your adventure...</p>
+  <button onclick="showGift('money')">💵 Take the Cash</button>
+  <button onclick="showGift('vacation')">🌴 Choose a Vacation</button>
+  <div id="message"></div>
+
+  <script>
+    function showGift(choice) {
+      const message = document.getElementById('message');
+      if (choice === 'money') {
+        message.innerHTML = "You’ve chosen the 💵 cash!<br>Please let us know and we’ll send it your way!";
+      } else {
+        message.innerHTML = "You’ve chosen the 🌴 vacation!<br>Let us know and we’ll start planning your getaway!";
+      }
+    }
+  </script>
+</body>
+</html>
